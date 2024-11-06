@@ -1,18 +1,24 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import './App.css'
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes}from 'react-router-dom' ;
+import StudentViewCoursesPage from './pages/StudentViewCoursesPage.jsx';
+//function App() {
+//   //const [count, setCount] = useState(0)
 
-function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <div className="App">
-            <h1 className="text-4xl font-bold text-center text-blue-500 mt-10">
-                MERN App with Tailwind CSS
-            </h1>
-        </div>
-    );
-}
-
-export default App
+//   return (
+//     import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+//     import StudentViewCoursesPage from './pages/StudentViewCoursesPage';
+    
+    function App() {
+        return (
+            <Router>
+                <Routes>
+                    <Route path="/StudentViewCoursesPage.jsx" element={<StudentViewCoursesPage />} />
+                    {/* Add more routes as needed */}
+                </Routes>
+            </Router>
+        );
+    }
+export default App;  
